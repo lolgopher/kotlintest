@@ -18,7 +18,7 @@ fun LiquibaseBaseInitalize() {
 
     val connection = DriverManager.getConnection(databaseUrl, databaseUser, databasePassword)
     val liquibase = Liquibase(
-        "db/changelog/changelog-root.sql",
+        "db/changelog/db.changelog-root.sql",
         ClassLoaderResourceAccessor(),
         JdbcConnection(connection)
     )

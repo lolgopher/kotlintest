@@ -1,0 +1,9 @@
+# https://docs.liquibase.com/start/design-liquibase-project.html
+# https://docs.liquibase.com/change-types/includeall.html
+
+databaseChangeLog:
+  - includeAll:
+#      path: db/changelog/
+#      relativeToChangelogFile: false
+      path: changelog/
+      relativeToChangelogFile: true
