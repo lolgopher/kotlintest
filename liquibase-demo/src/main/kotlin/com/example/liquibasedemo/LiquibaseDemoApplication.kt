@@ -8,7 +8,7 @@ import org.springframework.boot.runApplication
 class LiquibaseDemoApplication
 
 fun main(args: Array<String>) {
-    LiquibaseBaseInitalize()
+//    LiquibaseBaseInitalize()
 
     runApplication<LiquibaseDemoApplication>(*args)
 }

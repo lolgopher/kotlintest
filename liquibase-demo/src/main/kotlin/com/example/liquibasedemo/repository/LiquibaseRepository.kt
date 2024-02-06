@@ -11,7 +11,7 @@ class LiquibaseRepository {
 
 }
 
-public fun LiquibaseBaseInitalize() {
+fun LiquibaseBaseInitalize() {
     val databaseUrl = "jdbc:mysql://localhost:3306/ccaas_bot"
     val databaseUser = "botuser"
     val databasePassword = "botpw"

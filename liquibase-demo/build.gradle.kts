@@ -21,8 +21,12 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.liquibase:liquibase-core")
+    implementation("org.seleniumhq.selenium:selenium-java")
+
 
 //    implementation("org.liquibase:liquibase-core:4.24.0")
 //    implementation("org.liquibase:liquibase-groovy-dsl:2.1.1")
