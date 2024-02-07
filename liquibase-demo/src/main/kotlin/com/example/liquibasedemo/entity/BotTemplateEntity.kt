@@ -1,17 +1,18 @@
 package com.example.liquibasedemo.entity
 
-import jakarta.persistence.*
+import org.springframework.data.annotation.Id
+import org.springframework.data.relational.core.mapping.Column
+import org.springframework.data.relational.core.mapping.Table
 
-@Entity
-@Table(name = "bot_template", schema = "ccaas_bot")
+@Table("bot_template")
 class BotTemplateEntity(
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int = 0,
 
     @Column
     var organizationId: Int = 0,
 
-    @Column(length = 64, nullable = false)
+//    @Column(length = 64, nullable = false)
+    @Column
     var botTemplateName: String = ""
 )

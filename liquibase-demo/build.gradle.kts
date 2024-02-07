@@ -22,17 +22,13 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.liquibase:liquibase-core")
     implementation("org.seleniumhq.selenium:selenium-java")
 
-
-//    implementation("org.liquibase:liquibase-core:4.24.0")
-//    implementation("org.liquibase:liquibase-groovy-dsl:2.1.1")
-//    implementation("info.picocli:picocli:4.7.5")
-//    implementation("org.yaml:snakeyaml:2.0")
     implementation("mysql:mysql-connector-java:8.0.28")
+    implementation("io.asyncer:r2dbc-mysql")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

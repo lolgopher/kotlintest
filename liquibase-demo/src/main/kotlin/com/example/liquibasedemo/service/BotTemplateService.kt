@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service
 @Service
 class BotTemplateService @Autowired constructor(val botTemplateRepository: BotTemplateRepository) {
     fun createBotTemplate(botTemplateEntity: BotTemplateEntity): Int? {
-        return botTemplateRepository.save(botTemplateEntity).id
+        return botTemplateRepository.save(botTemplateEntity).block()?.id
     }
 
     fun deleteBotTemplate(id: Int) {
@@ -16,14 +16,14 @@ class BotTemplateService @Autowired constructor(val botTemplateRepository: BotTe
     }
 
     fun getBotTemplate(id: Int): BotTemplateEntity? {
-        return botTemplateRepository.findById(id).get()
+        return botTemplateRepository.findById(id).block()
     }
 
     fun updateBotTemplate(id: Int, botTemplateEntity: BotTemplateEntity): Int? {
-        val targetBotTemplate = botTemplateRepository.findById(id).get()
-        targetBotTemplate.botTemplateName = botTemplateEntity.botTemplateName
-        targetBotTemplate.organizationId = botTemplateEntity.organizationId
+        val targetBotTemplate = botTemplateRepository.findById(id).block()
+        targetBotTemplate?.botTemplateName = botTemplateEntity.botTemplateName
+        targetBotTemplate?.organizationId = botTemplateEntity.organizationId
         botTemplateRepository.save(botTemplateEntity)
-        return targetBotTemplate.id
+        return targetBotTemplate?.id
     }
 }
