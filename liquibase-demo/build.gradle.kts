@@ -29,6 +29,7 @@ dependencies {
 
     implementation("mysql:mysql-connector-java:8.0.28")
     implementation("io.asyncer:r2dbc-mysql")
+    implementation("io.github.daggerok:liquibase-r2dbc-spring-boot-starter:3.1.3")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
